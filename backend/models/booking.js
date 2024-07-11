@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('./index');
+const sequelize = require('../index');
 const User = require('./user');
 const Event = require('./event');
 
@@ -12,9 +12,6 @@ const Booking = sequelize.define('Booking', {
   num_tickets: {
     type: DataTypes.INTEGER,
     allowNull: false
-  },
-  seating_preference: {
-    type: DataTypes.STRING
   },
   ticket_buyer_name: {
     type: DataTypes.STRING

@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('./index');
+const sequelize = require('../index');
 
 const Event = sequelize.define('Event', {
   event_id: {
@@ -36,7 +36,7 @@ const Event = sequelize.define('Event', {
   created_by: {
     type: DataTypes.INTEGER,
     references: {
-      model: 'users',
+      model: 'user',
       key: 'user_id'
     }
   }
